@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game Highscores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Play Quiz Game</a>
+    </nav>
+
+    <main id="game-container" class="is-fullheight is-center-box">
+        <div class="container">
+            <h1 class="has-text-centered">High Scores</h1>
+            <div id="highscores" class="card"></div>
+        </div>
+    </main>
+
+    <script src="js/highscore.js"></script>
+    <script>
+        highscores.renderIn( document.getElementById( "highscores" ) );
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="highscore.html">View Highscores</a>
+    </nav>
+
+    <main id="game-container" class="is-fullheight is-center-box">
+        <div class="container">
+            <section id="intro" class="game-section row is-justified-center">
+                <div class="is-justified-center has-text-centered">
+                    <h1>Welcome!</h1>
+                    <button data-action="start">Start Game</button>
+                </div>
+            </section>
+            
+            <section id="game" class="game-section ">
+                <div id="score" class="score"><!-- Score will render here --></div>
+                <div class="row is-aligned-start">
+                    <div id="current-question" class="col card">
+                        <!-- Current question will render here -->
+                    </div>
+                    <div id="questions-cards" class="col question-cards is-aligned-start">
+
+                    </div>
+                </div>
+            </section>
+        
+            <section id="results-success" class="game-section" style="text-align: center;">
+                <h2>You Scored</h2>
+                <div id="final-score" class="score"><!-- Final score will render here --></div>
+                <form id="new-highscore">
+                    <input type="text" id="initials" placeholder="Enter your initials" />
+                    <button>Submit Score</button>
+                </form>
+                <hr style="max-width:60%;margin:2rem auto;">
+                <button data-action="start">Replay</button>
+            </section>
+
+            <section id="results-success-submit" class="game-section" style="text-align: center;">
+                <h2>Score Submitted</h2>
+                <a class="button" href="highscore.html">View Highscores</a>
+                <button data-action="start">Replay</button>
+            </section>
+
+            <section id="results-fail" class="game-section" style="text-align: center;">
+                <h2>You Lost</h2>
+                <p>Your score hit zero! Click the replay button below to try again.</p>
+                <hr style="max-width:60%;margin:2rem auto;">
+                <button data-action="start">Replay</button>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/questions.js"></script>
+    <script src="js/score.js"></script>
+    <script src="js/highscore.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
